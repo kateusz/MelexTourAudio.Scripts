@@ -37,7 +37,7 @@ log_step "KROK 2: Konfiguracja Nginx jako reverse proxy"
 # Tworzymy plik konfiguracyjny dla aplikacji
 sudo tee /etc/nginx/sites-available/melex > /dev/null << 'EOF'
 server {
-    listen 80;
+    listen 80 default_server;
     server_name rp.local;  # zamień na IP lub domenę Twojego Raspberry Pi
 
     location / {
