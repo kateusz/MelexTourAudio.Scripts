@@ -34,7 +34,7 @@ sudo apt install -y nginx
 check_command "Instalacja Nginx"
 
 log_step "KROK 2: Konfiguracja Nginx jako reverse proxy"
-#sudo rm /etc/nginx/sites-enabled/default 
+
 sudo systemctl restart nginx 
 # Tworzymy plik konfiguracyjny dla aplikacji
 sudo tee /etc/nginx/sites-available/melex > /dev/null << 'EOF'
